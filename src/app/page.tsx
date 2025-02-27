@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { Environment, PerspectiveCamera } from "@react-three/drei";
+import { Environment, PerspectiveCamera, Text } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,8 +10,9 @@ import { Badge } from "@/components/ui/badge";
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Background from "./background";
-import { Navbar } from "@/components/navbar";
+import Background from "@/components/background";
+import Navbar from "@/components/navbar";
+import Title from "@/components/title";
 
 export default function Welcome() {
   return (
@@ -19,16 +20,14 @@ export default function Welcome() {
       <Navbar />
       {/* Hero Section with 3D Background */}
       <section className="relative h-screen pt-16">
-        <Canvas className="absolute inset-0">
+        <Canvas className="inset-0 z-50">
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
           <Background />
           <Environment preset="night" />
         </Canvas>
-        <div className="absolute inset-0 flex items-center justify-center text-center z-10">
+        <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="space-y-4 p-4">
-            <h1 className="text-4xl sm:text-6xl font-bold">
-              {"NUKUVV".toLowerCase()}
-            </h1>
+            <Title />
             <p className="text-xl sm:text-2xl text-zinc-400">
               {"3D Artist & Motion Designer".toLowerCase()}
             </p>
@@ -72,12 +71,12 @@ export default function Welcome() {
               <Card key={item} className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-0">
                   <div className="relative h-64">
-                    <Image
+                    {/* <Image
                       src={`/placeholder.svg?height=400&width=600&text=Project ${item}`}
                       alt={`Project ${item}`}
                       fill
                       className="object-cover"
-                    />
+                    /> */}
                   </div>
                   <div className="p-4 space-y-2">
                     <h3 className="font-semibold">Project Title {item}</h3>

@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-export function Navbar() {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
