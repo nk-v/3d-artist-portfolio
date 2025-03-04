@@ -20,13 +20,13 @@ export default function Welcome() {
       <Navbar />
       {/* Hero Section with 3D Background */}
       <section className="relative h-screen pt-16">
-        <Canvas className="inset-0 z-50">
+        <Canvas className="inset-0">
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
           <Background />
           <Environment preset="night" />
         </Canvas>
         <div className="absolute inset-0 flex items-center justify-center text-center">
-          <div className="space-y-4 p-4">
+          <div>
             <Title />
             <p className="text-xl sm:text-2xl text-zinc-400">
               {"3D Artist & Motion Designer".toLowerCase()}
