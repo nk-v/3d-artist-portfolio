@@ -4,7 +4,12 @@ import * as React from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -20,15 +25,13 @@ export default function Navbar() {
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#work", label: "Work" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
+    { href: "#skills", label: "skills" },
+    { href: "#contact", label: "contact" },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${"bg-black/80 backdrop-blur-sm"}`}
     >
       <div className="container mx-auto max-w-6xl px-4">
         <nav className="flex items-center justify-end h-16">
@@ -50,31 +53,32 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <Button variant="outline" size="sm">
-                Download CV
+              <Button variant="secondary" size="sm">
+                {"Download CV".toLowerCase()}
               </Button>
             </li>
           </ul>
 
           {/* Mobile Navigation */}
           <Sheet>
+            <SheetTitle>{"Menu"}</SheetTitle>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
                 <Menu className="size-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-zinc-900 border-zinc-800">
+            <SheetContent side="right" className="bg-zinc-950 border-zinc-700">
               <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-lg hover:text-zinc-400 transition-colors"
+                    className="text-lg text-zinc-500 hover:text-zinc-400 transition-colors"
                   >
                     {item.label}
                   </Link>
                 ))}
-                <Button variant="secondary" className="mt-4">
+                <Button variant="secondary" className="text-black">
                   {"Download CV".toLowerCase()}
                 </Button>
               </nav>

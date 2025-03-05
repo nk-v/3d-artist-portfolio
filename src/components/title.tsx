@@ -24,7 +24,7 @@ export default function Title() {
   const name = "NUKUVV";
 
   return (
-    <h1 className="select-none text-4xl sm:text-6xl flex items-center flex-row">
+    <h1 className="select-none text-5xl sm:text-9xl flex items-center flex-row tracking-tighter">
       {name
         .toLowerCase()
         .split("")
