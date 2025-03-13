@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { FaDownload, FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow } from "react-icons/fa6";
 
 export default function About() {
   return (
@@ -18,17 +18,17 @@ export default function About() {
               combines technical precision with artistic vision to bring ideas
               to life.
             </p>
-            <div className="gap-2 grid sm:grid-cols-2">
+            <div className="gap-2 grid">
               <Link href={"#contact"}>
                 <Button variant="secondary" className="w-full">
                   <FaLocationArrow className="mr-2 size-4" />
                   {"Contact Me".toLowerCase()}
                 </Button>
               </Link>
-              <Button variant="secondary">
+              {/* <Button variant="secondary">
                 <FaDownload className="mr-2 size-4" />
                 {"Download CV".toLowerCase()}
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className="relative min-h-96 overflow-hidden">

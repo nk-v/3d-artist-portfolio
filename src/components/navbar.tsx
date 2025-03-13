@@ -48,11 +48,12 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li>
+            {/* <li>
               <Button variant="secondary" size="sm">
+                <FaDownload className="mr-2 size-4" />
                 {"Download CV".toLowerCase()}
               </Button>
-            </li>
+            </li> */}
           </ul>
 
           {/* Mobile Navigation */}
@@ -69,14 +70,15 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-lg text-zinc-500 hover:text-zinc-400 transition-colors"
+                    className="text-lg text-zinc-400 hover:text-zinc-200 transition-colors"
                   >
                     {item.label}
                   </Link>
                 ))}
-                <Button variant="secondary" className="text-black">
+                {/* <Button variant="secondary" className="text-black">
+                  <FaDownload className="mr-2 size-4" />
                   {"Download CV".toLowerCase()}
-                </Button>
+                </Button> */}
               </nav>
             </SheetContent>
           </Sheet>

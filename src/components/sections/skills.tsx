@@ -13,7 +13,7 @@ export default function Skills() {
             <Badge
               key={skill}
               variant="secondary"
-              className="text-base sm:text-xl"
+              className="text-base sm:text-xl px-4 py-2 bg-black text-zinc-300 border-zinc-500 hover:bg-zinc-500"
             >
               {skill.toLowerCase()}
             </Badge>

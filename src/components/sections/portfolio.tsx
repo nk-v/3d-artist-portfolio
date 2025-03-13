@@ -32,10 +32,11 @@ export default function Portfolio() {
               </CardContent>
             </Card>
           ))}
-          <Card className="p-6 text-5xl hover:bg-zinc-400 transition">
+          <Card className="text-5xl hover:bg-zinc-400 transition">
             <Link
               href={"https://instagram.com/nukuvv"}
               rel="noopener noreferrer"
+              className="flex flex-col p-6 h-full w-full"
               target="_blank"
             >
               <div className="flex flex-row">

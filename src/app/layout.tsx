@@ -9,7 +9,7 @@ const font = Font({
 });
 
 export const metadata: Metadata = {
-  title: "3D Artist Portfolio",
+  title: "nukuvv",
   description: "Portfolio for a 3D artist and motion designer",
 };
 
