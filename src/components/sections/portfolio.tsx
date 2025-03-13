@@ -14,7 +14,10 @@ export default function Portfolio() {
         </h2>
         <div className="flex flex-col gap-2 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map(({ webUrl, picUrl, title, description }, index) => (
-            <Card key={webUrl + index} className="bg-zinc-800 border-zinc-700">
+            <Card
+              key={webUrl + index}
+              className="bg-zinc-800 hover:opacity-70 transition border-zinc-700"
+            >
               <CardContent className="p-0">
                 <Link href={webUrl} rel="noopener noreferrer" target="_blank">
                   <div className="relative h-[500px]">
