@@ -12,12 +12,8 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
-
   React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => {};
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

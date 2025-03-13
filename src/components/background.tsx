@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useRef } from "react";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
 import { Sphere } from "@react-three/drei";
 import { easing } from "maath";
 
@@ -9,9 +9,8 @@ import * as THREE from "three";
 
 export default function Background() {
   const meshRef = useRef<THREE.Mesh>(null);
-  const { pointer } = useThree();
 
-  useFrame(({ clock, pointer }, delta) => {
+  useFrame(({ clock }, delta) => {
     if (meshRef.current) {
       const time = clock.getElapsedTime() * 0.25;
       easing.dampE(meshRef.current.rotation, [time, time, time], 0.5, delta);

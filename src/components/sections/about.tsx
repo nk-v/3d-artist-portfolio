@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaDownload, FaLocationArrow, FaTelegram } from "react-icons/fa6";
+import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 
 export default function About() {
   return (
@@ -14,8 +13,8 @@ export default function About() {
               About Me
             </h2>
             <p className="text-zinc-400">
-              i'm a passionate 3d artist and motion designer with over 3 years
-              of experience creating immersive digital projects. My work
+              i&apos;m a passionate 3d artist and motion designer with over 3
+              years of experience creating immersive digital projects. My work
               combines technical precision with artistic vision to bring ideas
               to life.
             </p>

@@ -1,37 +1,9 @@
 "use client";
 
-import { Github, Linkedin, Twitter } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FaInstagram, FaMailchimp, FaTelegram } from "react-icons/fa6";
 import { CONTACTS } from "@/data/contacts";
 
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { contactFormSchema, TContactFormValues } from "@/types/contactForm";
-
 export default function Contact() {
-  const form = useForm<TContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
   return (
     <section id="contact" className="py-20 px-4">
       <div className="container mx-auto max-w-4xl">
