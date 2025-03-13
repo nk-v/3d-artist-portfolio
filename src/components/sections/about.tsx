@@ -34,7 +34,7 @@ export default function About() {
           </div>
           <div className="relative min-h-96 overflow-hidden">
             <Image
-              src={"/overworker-thumb.jpg"}
+              src={"./overworker-thumb.jpg"}
               alt="Profile"
               fill
               className="object-cover"
