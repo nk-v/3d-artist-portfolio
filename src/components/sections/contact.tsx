@@ -9,7 +9,9 @@ export default function Contact() {
       <div className="container mx-auto max-w-4xl">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-8xl font-bold mb-4">Get in touch</h2>
+            <h2 className="text-6xl sm:text-8xl font-bold mb-4">
+              Get in touch
+            </h2>
             <p className="text-zinc-400 mb-6">
               feel free to expose your ideas:
             </p>

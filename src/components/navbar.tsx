@@ -10,6 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import DownloadCvButton from "./base/downloadCvButton";
 
 export default function Navbar() {
   React.useEffect(() => {
@@ -48,12 +49,9 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            {/* <li>
-              <Button variant="secondary" size="sm">
-                <FaDownload className="mr-2 size-4" />
-                {"Download CV".toLowerCase()}
-              </Button>
-            </li> */}
+            <li>
+              <DownloadCvButton />
+            </li>
           </ul>
 
           {/* Mobile Navigation */}
@@ -70,15 +68,12 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-lg text-zinc-400 hover:text-zinc-200 transition-colors"
+                    className="text-lg text-zinc-300 hover:text-zinc-200 transition-colors"
                   >
                     {item.label}
                   </Link>
                 ))}
-                {/* <Button variant="secondary" className="text-black">
-                  <FaDownload className="mr-2 size-4" />
-                  {"Download CV".toLowerCase()}
-                </Button> */}
+                <DownloadCvButton />
               </nav>
             </SheetContent>
           </Sheet>
