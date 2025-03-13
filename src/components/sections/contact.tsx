@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { contactFormSchema, TContactFormValues } from "@/types/contactForm";
-import { sendEmail } from "@/api/sendEmail";
 
 export default function Contact() {
   const form = useForm<TContactFormValues>({
@@ -32,10 +31,6 @@ export default function Contact() {
       message: "",
     },
   });
-
-  const onSubmit = (values: TContactFormValues) => {
-    sendEmail(values);
-  };
 
   return (
     <section id="contact" className="py-20 px-4">
