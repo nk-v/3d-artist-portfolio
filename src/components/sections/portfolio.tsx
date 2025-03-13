@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { BiPlay } from "react-icons/bi";
+import { SHOWREEL_URL } from "@/common/constants";
 
 export default function Portfolio() {
   return (
@@ -32,6 +33,21 @@ export default function Portfolio() {
               </CardContent>
             </Card>
           ))}
+          <Card className="text-5xl hover:bg-zinc-400 transition">
+            <Link
+              href={SHOWREEL_URL}
+              rel="noopener noreferrer"
+              className="flex flex-col p-6 h-full"
+              target="_blank"
+            >
+              <div className="break-words">
+                <div>watch 2025 showreel</div>
+              </div>
+              <div className="select-none text-white">
+                <p>go to vimeo</p>
+              </div>
+            </Link>
+          </Card>
           <Card className="text-5xl hover:bg-zinc-400 transition">
             <Link
               href={"https://instagram.com/nukuvv"}

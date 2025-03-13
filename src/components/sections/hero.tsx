@@ -2,6 +2,10 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, PerspectiveCamera } from "@react-three/drei";
 import Background from "@/components/background";
 import Title from "@/components/title";
+import { Button } from "@/components/ui/button";
+import { BiPlay } from "react-icons/bi";
+import Link from "next/link";
+import { SHOWREEL_URL } from "@/common/constants";
 
 export default function Hero() {
   return (
@@ -17,6 +21,12 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl text-start text-zinc-400 tracking-tighter">
             {"3D Artist & Motion Designer".toLowerCase()}
           </p>
+          <Link href={SHOWREEL_URL} rel="noopener noreferrer" target="_blank">
+            <Button variant={"secondary"} className="w-full mt-2">
+              <BiPlay />
+              {"watch 2025 showreel"}
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
