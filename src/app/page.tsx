@@ -10,7 +10,7 @@ import Contact from "@/components/sections/contact";
 
 export default function Welcome() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen text-white">
       <Navbar />
       <Hero />
       <About />
