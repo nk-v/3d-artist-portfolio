@@ -8,7 +8,7 @@ type TProject = {
 export const PROJECTS: TProject[] = [
   {
     webUrl: "https://www.instagram.com/p/CyX6H4Jt4Q4/",
-    picUrl: `./shell-thumb.jpg`,
+    picUrl: "./shell-thumb.jpg",
     title: "SHELL".toLowerCase(),
     description: "self project: practicing texturing and look dev",
   },
@@ -22,7 +22,7 @@ export const PROJECTS: TProject[] = [
     webUrl: "https://www.instagram.com/p/CzRC3hPNU53/",
     picUrl: "./fresh-breezer-thumb.jpg",
     title: "FRESH BREEZER".toLowerCase(),
-    description: `winner of mediaart animation contest:\r\nfake advertisment of non-functional product`,
+    description: "winner of mediaart animation contest:\r\nfake advertisment of non-functional product",
   },
   {
     webUrl: "https://www.instagram.com/p/Cg187UesQ-2/",

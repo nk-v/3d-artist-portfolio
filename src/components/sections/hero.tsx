@@ -1,5 +1,3 @@
-import { Canvas } from "@react-three/fiber";
-import { Environment, PerspectiveCamera } from "@react-three/drei";
 import Background from "@/components/background";
 import Title from "@/components/title";
 import ShowreelButton from "./components/showreelButton";
