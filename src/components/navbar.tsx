@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { useEffect, useState } from "react";
 
 import { Menu } from "lucide-react";
 import Link from "next/link";
@@ -16,8 +16,12 @@ import {
 import DownloadCvButton from "./base/downloadCvButton";
 
 export default function Navbar() {
-  React.useEffect(() => {
-    const handleScroll = () => {};
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,35 +35,39 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${"bg-black/80 backdrop-blur-sm"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition duration-500 ${
+        isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
+      }`}
     >
-      <div className="container mx-auto max-w-6xl px-4">
-        <nav className="flex items-center justify-end h-16">
-          {/* Logo */}
-          {/* <Link href="/" className="text-xl font-bold">
-            nkv
-          </Link> */}
+      <div className="container mx-auto max-w-7xl px-4">
+        <nav className="flex items-center h-14">
+          <div className="flex items-center w-full justify-between">
+            {/* Logo */}
+            <Link href="#" className="text-xl font-bold">
+              {"vv"}
+            </Link>
 
-          {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm hover:text-zinc-400 transition-colors"
-                >
-                  {item.label.toLowerCase()}
-                </Link>
+            {/* Desktop Navigation */}
+            <ul className="hidden md:flex items-center justify-center gap-8">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm hover:text-zinc-400 transition-colors"
+                  >
+                    {item.label.toLowerCase()}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <DownloadCvButton />
               </li>
-            ))}
-            <li>
-              <DownloadCvButton />
-            </li>
-          </ul>
+            </ul>
+          </div>
 
           {/* Mobile Navigation */}
           <Sheet>
-            <SheetTitle>{"Menu"}</SheetTitle>
+            <SheetTitle className="hidden">{"Menu"}</SheetTitle>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
                 <Menu className="size-5" />

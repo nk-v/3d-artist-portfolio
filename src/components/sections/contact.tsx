@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import { CONTACTS } from "@/data/contacts";
 
+import EmailLink from "./components/emailLink";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4">
@@ -16,20 +18,24 @@ export default function Contact() {
             <p className="text-zinc-400 mb-6">
               feel free to expose your ideas:
             </p>
-            <div className="flex gap-4">
-              {CONTACTS.map(({ name, link, icon: IconComponent }, index) => {
-                return (
-                  <Link
-                    key={`${name}_${index}`}
-                    href={link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="hover:text-zinc-400"
-                  >
-                    <IconComponent className="size-12" />
-                  </Link>
-                );
-              })}
+            <div className="flex flex-col gap-4">
+              <EmailLink />
+              <div className="flex gap-4 items-center">
+                {CONTACTS.map(({ name, link, icon: IconComponent }, index) => {
+                  return (
+                    <Link
+                      key={`${name}_${index}`}
+                      href={link}
+                      title={name}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="hover:text-zinc-400 flex items-center gap-2"
+                    >
+                      <IconComponent className="size-8" />
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
           {/* <Form {...form}>

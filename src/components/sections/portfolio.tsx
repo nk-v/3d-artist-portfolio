@@ -18,7 +18,7 @@ export default function Portfolio() {
           {PROJECTS.map(({ webUrl, picUrl, title, description }, index) => (
             <Card
               key={webUrl + index}
-              className="bg-zinc-800 hover:opacity-70 transition border-zinc-700"
+              className="bg-zinc-800 hover:opacity-75 transition border-zinc-700"
             >
               <CardContent className="p-0">
                 <Link href={webUrl} rel="noopener noreferrer" target="_blank">
@@ -38,7 +38,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
           ))}
-          <Card className="text-5xl hover:bg-zinc-400 transition">
+          <Card className="text-5xl hover:bg-white/50 transition">
             <Link
               href={SHOWREEL_URL}
               rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function Portfolio() {
               </div>
             </Link>
           </Card>
-          <Card className="text-5xl hover:bg-zinc-400 transition">
+          <Card className="text-5xl hover:bg-white/50 transition">
             <Link
               href={"https://instagram.com/nukuvv"}
               rel="noopener noreferrer"
@@ -68,7 +68,6 @@ export default function Portfolio() {
                 </div>
                 <BiPlay />
               </div>
-
               <div className="select-none text-white">
                 <p>go to</p>
                 <p className="break-words">instagram</p>
