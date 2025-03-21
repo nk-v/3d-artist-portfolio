@@ -1,4 +1,3 @@
-import Background from "@/components/background";
 import Title from "@/components/title";
 
 import ShowreelButton from "./components/showreelButton";
@@ -6,7 +5,6 @@ import ShowreelButton from "./components/showreelButton";
 export default function Hero() {
   return (
     <section className="relative h-screen pt-16">
-      <Background />
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="p-16">
           <Title />

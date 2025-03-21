@@ -1,5 +1,6 @@
 "use client";
 
+import Background from "@/components/background";
 import Navbar from "@/components/navbar";
 import About from "@/components/sections/about";
 import Contact from "@/components/sections/contact";
@@ -11,6 +12,7 @@ import Skills from "@/components/sections/skills";
 export default function Welcome() {
   return (
     <main className="min-h-screen text-white">
+      <Background />
       <Navbar />
       <Hero />
       <About />

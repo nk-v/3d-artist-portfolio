@@ -11,11 +11,13 @@ import * as THREE from "three";
 
 export default function Background() {
   return (
-    <Canvas className="inset-0">
-      <PerspectiveCamera makeDefault position={[-1, 0, 5]} />
-      <SphereMesh />
-      <Environment preset="night" />
-    </Canvas>
+    <div className="fixed h-screen w-screen -z-50">
+      <Canvas>
+        <PerspectiveCamera makeDefault position={[-1, 0, 5]} />
+        <SphereMesh />
+        <Environment preset="night" />
+      </Canvas>
+    </div>
   );
 }
 
@@ -23,10 +25,11 @@ function SphereMesh() {
   const meshRef = useRef<THREE.Mesh>(null);
 
   useFrame(({ clock }, delta) => {
-    if (meshRef.current) {
-      const time = clock.getElapsedTime() * 0.1;
-      easing.dampE(meshRef.current.rotation, [time, time, time], 0.5, delta);
+    if (!meshRef.current) {
+      return;
     }
+    const time = clock.getElapsedTime() * 0.1;
+    easing.dampE(meshRef.current.rotation, [time, time, time], 0.5, delta);
   });
 
   return (
