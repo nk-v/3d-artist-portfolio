@@ -1,10 +1,13 @@
-import { SHOWREEL_URL } from "@/common/constants";
+import React from "react";
+
+import Link from "next/link";
+import { BiPlay } from "react-icons/bi";
+
 import Embed from "@/components/base/embed";
 import Modal from "@/components/base/modal";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import React from "react";
-import { BiPlay } from "react-icons/bi";
+
+import { SHOWREEL_URL } from "@/common/constants";
 
 export default function ShowreelButton() {
   const renderButton = () => (

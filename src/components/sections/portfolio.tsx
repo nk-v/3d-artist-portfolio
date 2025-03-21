@@ -1,9 +1,11 @@
-import { PROJECTS } from "@/data/projects";
-import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { BiPlay } from "react-icons/bi";
+
+import { Card, CardContent } from "@/components/ui/card";
+
 import { SHOWREEL_URL } from "@/common/constants";
+import { PROJECTS } from "@/data/projects";
 
 export default function Portfolio() {
   return (

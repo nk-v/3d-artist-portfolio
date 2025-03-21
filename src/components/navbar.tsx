@@ -1,8 +1,10 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
+
 import { Menu } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -10,6 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
 import DownloadCvButton from "./base/downloadCvButton";
 
 export default function Navbar() {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import { CONTACTS } from "@/data/contacts";
 
 export default function Contact() {

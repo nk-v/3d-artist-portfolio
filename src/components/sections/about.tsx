@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
+
+import { Button } from "@/components/ui/button";
+
 import DownloadCvButton from "../base/downloadCvButton";
 
 export default function About() {

@@ -1,12 +1,12 @@
 "use client";
 
 import Navbar from "@/components/navbar";
-import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
+import Contact from "@/components/sections/contact";
+import Footer from "@/components/sections/footer";
+import Hero from "@/components/sections/hero";
 import Portfolio from "@/components/sections/portfolio";
 import Skills from "@/components/sections/skills";
-import Footer from "@/components/sections/footer";
-import Contact from "@/components/sections/contact";
 
 export default function Welcome() {
   return (

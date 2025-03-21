@@ -1,13 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { Sphere } from "@react-three/drei";
-import { easing } from "maath";
 
-import * as THREE from "three";
-import { Canvas } from "@react-three/fiber";
+import { Sphere } from "@react-three/drei";
 import { Environment, PerspectiveCamera } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
+import { easing } from "maath";
+import * as THREE from "three";
 
 export default function Background() {
   return (

@@ -1,6 +1,6 @@
-import * as Dialog from "@radix-ui/react-dialog";
-
 import { ReactNode } from "react";
+
+import * as Dialog from "@radix-ui/react-dialog";
 
 type TModal = {
   children: ReactNode;

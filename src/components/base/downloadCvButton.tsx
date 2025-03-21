@@ -1,6 +1,8 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+
 import { FaDownload } from "react-icons/fa6";
+
+import { Button } from "@/components/ui/button";
 
 export default function DownloadCvButton() {
   const onClick = () => {
