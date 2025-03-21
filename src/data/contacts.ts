@@ -1,5 +1,9 @@
 import { IconType } from "react-icons";
-import { FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa6";
+import {
+  BiLogoInstagram,
+  BiLogoLinkedinSquare,
+  BiLogoTelegram,
+} from "react-icons/bi";
 
 type TContact = {
   name: string;
@@ -8,19 +12,20 @@ type TContact = {
 };
 
 export const CONTACTS: TContact[] = [
+
   {
     name: "Telegram",
     link: "https://t.me/nukuvv",
-    icon: FaTelegram,
+    icon: BiLogoTelegram,
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/nukuvv",
-    icon: FaInstagram,
+    icon: BiLogoInstagram,
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/nukuvv",
-    icon: FaLinkedin,
+    icon: BiLogoLinkedinSquare,
   },
 ];
