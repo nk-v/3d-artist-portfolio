@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Major_Mono_Display as Font } from "next/font/google";
 
+import YandexMetrika from "@/scripts/yandexMetrika";
+
 import "./globals.css";
 
 const font = Font({
@@ -21,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.variable} font-sans bg-black`}>{children}</body>
+      <body className={`${font.variable} font-sans bg-black`}>
+        <YandexMetrika />
+        {children}
+      </body>
     </html>
   );
 }
