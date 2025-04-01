@@ -35,7 +35,7 @@ function YandexNoScript() {
 }
 
 export default function YandexMetrika() {
-  console.log("COUNTER_ID", process.env.YANDEX_METRIKA_COUNTER_ID);
+  console.log("COUNTER_ID_NEW", process.env.YANDEX_METRIKA_COUNTER_ID);
 
   return (
     <>
