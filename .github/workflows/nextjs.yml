@@ -28,11 +28,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      YANDEX_METRIKA_COUNTER_ID: ${{secrets.YANDEX_METRIKA_COUNTER_ID}}
     steps:
-      - name: Check secret variables
-        run: echo "You will see asterisks if the Yandex Metrika secret is existing - ${{env.YANDEX_METRIKA_COUNTER_ID}}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
