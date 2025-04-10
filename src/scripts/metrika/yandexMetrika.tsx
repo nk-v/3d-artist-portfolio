@@ -4,6 +4,8 @@ import React from "react";
 
 import Script from "next/script";
 
+import { YANDEX_METRIKA_COUNTER_ID } from "./constants";
+
 const YANDEX_INLINE_SCRIPT = `
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
@@ -11,7 +13,7 @@ const YANDEX_INLINE_SCRIPT = `
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(100643199, "init", {
+   ym(${YANDEX_METRIKA_COUNTER_ID}, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true
@@ -23,7 +25,7 @@ function YandexNoScript() {
       <div>
         {/* eslint-disable @next/next/no-img-element */}
         <img
-          src={"https://mc.yandex.ru/watch/100643199"}
+          src={`https://mc.yandex.ru/watch/${YANDEX_METRIKA_COUNTER_ID}`}
           alt=""
           className="absolute -left-[9999px]"
         />
@@ -33,8 +35,6 @@ function YandexNoScript() {
 }
 
 export default function YandexMetrika() {
-  console.log("COUNTER_ID_NEW", process.env.YANDEX_METRIKA_COUNTER_ID);
-
   return (
     <>
       <Script id="yandex-metrika">{YANDEX_INLINE_SCRIPT}</Script>

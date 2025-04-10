@@ -8,10 +8,17 @@ import Modal from "@/components/base/modal";
 import { Button } from "@/components/ui/button";
 
 import { SHOWREEL_URL } from "@/common/constants";
+import { sendMetrika } from "@/scripts/metrika/utils";
 
 export default function ShowreelButton() {
   const renderButton = () => (
-    <Button variant={"secondary"} className="w-full mt-2">
+    <Button
+      onClick={() =>
+        sendMetrika({ event: "reachGoal", goalId: "ShowreelButton" })
+      }
+      variant={"secondary"}
+      className="w-full mt-2"
+    >
       <BiPlay />
       {"watch 2025 showreel"}
     </Button>

@@ -4,8 +4,11 @@ import { FaDownload } from "react-icons/fa6";
 
 import { Button } from "@/components/ui/button";
 
+import { sendMetrika } from "@/scripts/metrika/utils";
+
 export default function DownloadCvButton() {
   const onClick = () => {
+    sendMetrika({ event: "reachGoal", goalId: "DownloadCVButton" });
     window.open("./docs/cv_nukuvv.pdf");
   };
 

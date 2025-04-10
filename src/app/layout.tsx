@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Major_Mono_Display as Font } from "next/font/google";
 
-import YandexMetrika from "@/scripts/yandexMetrika";
+import YandexMetrika from "@/scripts/metrika/yandexMetrika";
 
 import "./globals.css";
 
